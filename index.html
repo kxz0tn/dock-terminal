@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Dock Terminal — a public all-ages berth. Ask one clean English question. OP answers.">
+  <title>DOCK TERMINAL</title>
+  <link rel="stylesheet" href="css/dock.css">
+</head>
+<body>
+  <div id="app">
+    <header id="bar">
+      <div id="bar-left">
+        <span id="title">DOCK TERMINAL</span>
+        <span class="meta">GUEST</span>
+        <span class="meta">ALL AGES</span>
+      </div>
+      <div id="bar-right">
+        <span id="open-word">OPEN</span>
+        <span class="meta" id="tide-word">FLOOD</span>
+        <span class="meta">CARGO <span id="cargo-count">0</span></span>
+        <span class="meta">EN</span>
+        <span id="clock" class="meta">00:00</span>
+      </div>
+    </header>
+
+    <div id="stream">
+      <main id="log" role="log" aria-live="polite" aria-relevant="additions"></main>
+      <form id="prompt-row" autocomplete="off">
+        <label id="ps" for="in">DOCK&gt;</label>
+        <input
+          id="in"
+          name="q"
+          type="text"
+          maxlength="400"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="off"
+          spellcheck="false"
+          enterkeyhint="send"
+          aria-label="Ask a question"
+        >
+        <button type="submit" id="btn-send">SEND</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/safety.js"></script>
+  <script src="js/detect.js"></script>
+  <script src="js/tides.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/oracle.js"></script>
+  <script src="js/boot.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
